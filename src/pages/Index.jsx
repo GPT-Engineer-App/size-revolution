@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AspectRatio, Box, Button, Container, Flex, FormControl, FormLabel, Heading, Icon, Image, Input, Link, Select, SimpleGrid, Text, Textarea, useDisclosure, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from "@chakra-ui/react";
-import { FaFacebook, FaGoogle, FaTwitter, FaUser, FaLock, FaShare, FaEnvelope, FaPencilAlt, FaEye } from "react-icons/fa";
+import { FaFacebook, FaGoogle, FaTwitter, FaUser, FaLock, FaShare, FaEnvelope, FaPencilAlt, FaEye, FaChevronRight } from "react-icons/fa";
 
 const Index = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -65,23 +65,62 @@ const Index = () => {
             </Button>
           </Flex>
 
-          <Box mb={12}>
-            <Heading as="h3" size="lg" mb={6}>
+          <Box mb={16}>
+            <Heading as="h3" size="xl" mb={8}>
               Public Sizes
             </Heading>
-            <SimpleGrid columns={2} spacing={8}>
-              <Box p={6} bg="white" borderRadius="lg" boxShadow="md" transition="all 0.2s" _hover={{ boxShadow: "lg" }}>
-                <Text fontWeight="bold" mb={2} fontSize="xl">
+            <SimpleGrid columns={[1, 2, 3]} spacing={8}>
+              <Box p={8} bg="white" borderRadius="lg" boxShadow="xl" transition="all 0.3s" _hover={{ transform: "translateY(-5px)", boxShadow: "2xl" }}>
+                <Text fontWeight="bold" mb={2} fontSize="2xl">
                   T-Shirt
                 </Text>
-                <Text fontSize="lg">Medium</Text>
+                <Text fontSize="xl" color="gray.500">
+                  Medium
+                </Text>
               </Box>
-              <Box p={6} bg="white" borderRadius="lg" boxShadow="md" transition="all 0.2s" _hover={{ boxShadow: "lg" }}>
-                <Text fontWeight="bold" mb={2} fontSize="xl">
+              <Box p={8} bg="white" borderRadius="lg" boxShadow="xl" transition="all 0.3s" _hover={{ transform: "translateY(-5px)", boxShadow: "2xl" }}>
+                <Text fontWeight="bold" mb={2} fontSize="2xl">
                   Jeans
                 </Text>
-                <Text fontSize="lg">32x32</Text>
+                <Text fontSize="xl" color="gray.500">
+                  32x32
+                </Text>
               </Box>
+              <Box p={8} bg="white" borderRadius="lg" boxShadow="xl" transition="all 0.3s" _hover={{ transform: "translateY(-5px)", boxShadow: "2xl" }}>
+                <Text fontWeight="bold" mb={2} fontSize="2xl">
+                  Shoes
+                </Text>
+                <Text fontSize="xl" color="gray.500">
+                  10
+                </Text>
+              </Box>
+              <Box p={8} bg="white" borderRadius="lg" boxShadow="xl" transition="all 0.3s" _hover={{ transform: "translateY(-5px)", boxShadow: "2xl" }}>
+                <Text fontWeight="bold" mb={2} fontSize="2xl">
+                  Jacket
+                </Text>
+                <Text fontSize="xl" color="gray.500">
+                  Large
+                </Text>
+              </Box>
+            </SimpleGrid>
+          </Box>
+
+          <Box mb={24}>
+            <Flex justify="space-between" align="center" mb={8}>
+              <Heading as="h3" size="xl">
+                3D Interactive Models
+              </Heading>
+              <Link href="/models" fontSize="lg" color="brand.500" fontWeight="medium">
+                View All Models <Icon as={FaChevronRight} ml={1} />
+              </Link>
+            </Flex>
+            <SimpleGrid columns={[1, 2]} spacing={8}>
+              <AspectRatio ratio={1}>
+                <Image src="https://images.unsplash.com/photo-1618453292459-53424b66bb6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2xvdGhpbmcsbW9kZWx8fHx8fHwxNjc5OTMxNjUy&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="3D Clothing Model" borderRadius="lg" objectFit="cover" />
+              </AspectRatio>
+              <AspectRatio ratio={1}>
+                <Image src="https://images.unsplash.com/photo-1618453292459-53424b66bb6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2xvdGhpbmcsbW9kZWx8fHx8fHwxNjc5OTMxNjUy&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="3D Clothing Model" borderRadius="lg" objectFit="cover" />
+              </AspectRatio>
             </SimpleGrid>
           </Box>
 

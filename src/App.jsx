@@ -7,7 +7,7 @@ import Navigation from "./components/Navigation.jsx";
 
 function App() {
   return (
-    <Box bg="gray.50" minH="100vh">
+    <Box bg="gray.100" minH="100vh">
       <Router>
         <Navigation />
         <Container maxW="container.lg" py={8}>
