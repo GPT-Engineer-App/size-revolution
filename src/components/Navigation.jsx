@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container, Flex, Heading, Icon, Link } from "@chakra-ui/react";
-import { FaHome, FaUser, FaCube } from "react-icons/fa";
+import { FaHome, FaUser, FaCube, FaCode, FaBook } from "react-icons/fa";
 import { Link as RouterLink } from "react-router-dom";
 
 const Navigation = () => {
@@ -20,9 +20,17 @@ const Navigation = () => {
               <Icon as={FaUser} mr={2} />
               Profile
             </Link>
-            <Link as={RouterLink} to="/models" fontWeight="medium" fontSize="lg" _hover={{ color: "brand.600" }}>
+            <Link as={RouterLink} to="/models" mr={8} fontWeight="medium" fontSize="lg" _hover={{ color: "brand.600" }}>
               <Icon as={FaCube} mr={2} />
               3D Models
+            </Link>
+            <Link as={RouterLink} to="/code" mr={8} fontWeight="medium" fontSize="lg" _hover={{ color: "brand.600" }}>
+              <Icon as={FaCode} mr={2} />
+              Code Files
+            </Link>
+            <Link as={RouterLink} to="/instructions" fontWeight="medium" fontSize="lg" _hover={{ color: "brand.600" }}>
+              <Icon as={FaBook} mr={2} />
+              Instructions
             </Link>
           </Flex>
         </Flex>
